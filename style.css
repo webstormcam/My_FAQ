@@ -1,0 +1,163 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: linear-gradient(hsl(273, 75%, 66%),hsl(240, 73%, 65%));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+h1,h2,p{
+    margin-top: 0;
+}
+
+h2{
+    font-size: 40px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+#faqCard{
+    display: flex;
+    flex-direction: column;
+    width: 375px;
+    background-color: #fff;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    padding-bottom: 40px;
+    margin-top: 122px;
+    box-shadow: 0 4px 7px -2px black;
+}
+
+.faqImages{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.boxxy{
+    display: none;
+}
+
+.codeLady{
+position: absolute;
+bottom: 15px;
+left: 40px;
+}
+
+.bigCodeLady{
+    display: none;
+}
+
+
+
+
+.accordion{
+
+    color: hsl(0, 3%, 21%);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    transition: 0.4s;
+    outline: none;
+    border: none;
+    background-color: #fff;
+}
+
+.panel{
+    padding: 0 18px;
+    background-color:#fff ;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+    color:hsl(240, 3%, 19%);
+}
+
+ .accordion:hover{
+    color: hsl(14, 88%, 65%);
+}
+
+.active{
+    color: black;
+}
+
+.accordion::after{
+    content: url('imgs/icon-arrow-down.svg');
+    font-size: 15px;
+    float: right;
+    margin-left: 5px;
+}
+
+.active::after{
+    content: url('imgs/icon-arrow-down.svg');
+    transform: scaleY(-1);
+}
+
+@media screen and (min-width:1440px){
+    #faqCard{
+        flex-direction: row;
+        width: 990px;
+        padding: 40px;
+        position: relative;
+    }
+
+    .boxxy{
+        display: block;
+        position: absolute;
+        top: 210px;
+        left: -70px;
+        z-index: 99;
+        transition: 0.4s;
+    }
+
+    h2{
+        text-align: left;
+        padding-left: 18px;
+    }
+
+    .faqImages{
+        overflow: hidden;
+        background-image: url('imgs/bg-pattern-desktop.svg');
+        background-repeat: no-repeat;
+        background-position: right 5vw bottom -20vh,left 0vw top 0vh;
+    }
+
+    .codeLady{
+        display: none;
+    }
+    .bigCodeLady{
+        display: block;
+        position: absolute;
+        top: 24px;
+        right: 130px;
+    }
+
+   
+
+    .smallShadow{
+        display: none;
+    }
+
+     .boxxy:hover{
+        transform: translateX(-50px);
+    }
+}
