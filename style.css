@@ -112,7 +112,7 @@ left: 40px;
     transform: scaleY(-1);
 }
 
-@media screen and (min-width:1440px){
+@media screen and (min-width:1024px){
     #faqCard{
         flex-direction: row;
         width: 990px;
